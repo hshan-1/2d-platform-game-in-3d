@@ -28,7 +28,7 @@ public class collisions : MonoBehaviour
     {
         foreach (ContactPoint contact in collision.contacts)
         {
-            Debug.DrawRay(contact.point, contact.normal, Color.white);
+            Debug.DrawRay(contact.point, contact.normal, Color.green,10,false);
         }
     }
         // Start is called before the first frame update

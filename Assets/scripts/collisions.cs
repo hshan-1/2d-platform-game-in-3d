@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using TMPro;
 
 public class collisions : MonoBehaviour
 {
+    public TMP_Text tex1;
     public int  Player_score=0;
-    //public GameObject ObjectTo_Disappear;
     public void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("bash"))
@@ -24,15 +26,8 @@ public class collisions : MonoBehaviour
             Player_score = 0;
         }
     }
-    void OnCollisionEnter(Collision collision)
-    {
-        foreach (ContactPoint contact in collision.contacts)
-        {
-            Debug.DrawRay(contact.point, contact.normal, Color.green,10,false);
-        }
-    }
-        // Start is called before the first frame update
-        void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         
     }
